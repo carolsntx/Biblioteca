@@ -14,12 +14,18 @@
     <script defer src="/your-path-to-fontawesome/js/brands.js"></script>
     <script defer src="/your-path-to-fontawesome/js/solid.js"></script>
     <script defer src="/your-path-to-fontawesome/js/fontawesome.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
 </head>
 
 <body style="background-color: #ebedeb;">
     <ul class="menu">
 
-        <li title="Home"><a href="#" class="menu-button home">menu</a></li>
+        <li title="Home"><a href="#" class="menu-button home">Inicio</a></li>
 
         <li title="search"><a href="#" class="search">Filmes</a></li>
         <li title="pencil"><a href="#" class="pencil">pencil</a></li>
@@ -31,84 +37,7 @@
     <div class=content>
         <img src="{% static 'img/logo.png' %}" class="logo">
     </div>
-    <div style="background-color: white; width: 1150px; height: 150px; margin-left: 150px; border-radius: 10px; line-height: 50%;">
-    <div class="card">
-        <div class="card-body">
-            Total
-            <svg width="35px" height="30px" viewBox="0 0 16 16" class="bi bi-bar-chart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#00853b; margin-left:130px">
-                <rect width="4" height="5" x="1" y="10" rx="1"/>
-                <rect width="4" height="9" x="6" y="6" rx="1"/>
-                <rect width="4" height="14" x="11" y="1" rx="1"/>
-              </svg>
-        </div>
-        </div>
-
-        <div class="card" style="margin-left: 450px; margin-top: -105px;margin-bottom: 35px">
-            <div class="card-body">
-                Em uso
-                <svg width="35px" height="30px" viewBox="0 0 16 16" class="bi bi-clipboard-data" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#00853b; margin-left:130px">
-                    <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                    <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                    <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"/>
-                  </svg>
-            </div>
-
-            </div>
-
-      </div>
-      <div style="background-color: white; width: 1150px; height: 400px; margin-left: 150px; border-radius: 10px; margin-top: 30px;">
-        <div class="input-group" style="margin-left: 50px; width: 500px;">
-            <input type="text" class="form-control" placeholder="Pesquisar" style="width: 50px; margin-top: 30px;">
-            <div class="input-group-append" style="margin-top: 30px;">
-              <button class="btn btn-secondary" type="button" style="background-color: #00853b">
-                <i class="fa fa-search"></i>
-              </button>
-            </div>
-          </div>
-          <table class="table" style="margin-left: 55px; margin-top: 50px; width: 1040px;">
-            <thead class="thead" style="background-color: #00853b; color: white;" >
-              <tr>
-                <th scope="col">Código</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Autor</th>
-                <th scope="col">Em uso</th>
-                <th scope="col">Responsável</th>
-                <th scope="col">#</th>
-
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>A Herdeira</td>
-                <td>Kiera Cass</td>
-                <td>Sim</td>
-                <td>Ana Carolina</td>
-                <td><svg width="25px" height="20px" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                  </svg></td>
-
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>A Herdeira</td>
-                <td>Kiera Cass</td>
-                <td>Sim</td>
-                <td>Ana Carolina</td>
-                <td><svg width="25px" height="20px" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                  </svg></td>
-              </tr>
-             
-            </tbody>
-     
-          
-         
-          </table>
-    </div>
+    
     {% block content %} {% endblock %}
 </body>
 
