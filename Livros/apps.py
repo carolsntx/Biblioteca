@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class LivrosConfig(AppConfig):
-    name = 'Livros'
+    name = 'livros'
