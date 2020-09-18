@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import Autor
 
-# Create your views here.
+def autor(request):
+    autor = Autor.objects.all()
+    return render(request, 'autores.html', {'autor': autor})

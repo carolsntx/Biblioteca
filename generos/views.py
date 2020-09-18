@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .models import Genero
 
-# Create your views here.
+
+def genero(request):
+    genero = Genero.objects.all()
+    return render(request, 'generos.html', {'genero': genero})

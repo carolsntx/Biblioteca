@@ -1,0 +1,94 @@
+{% extends 'base.html' %} {% block title %} Autores {% endblock %} {% block content %} {% load static %}
+
+<body>
+
+    <div class="superior">
+        <div class="card">
+            <div class="card-body">
+                Total
+               
+                <svg width="35px" height="30px" viewBox="0 0 16 16" class="bi bi-bar-chart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#00853b; margin-left:130px">
+                    <rect width="4" height="5" x="1" y="10" rx="1"/>
+                    <rect width="4" height="9" x="6" y="6" rx="1"/>
+                    <rect width="4" height="14" x="11" y="1" rx="1"/>
+                  </svg>
+            </div>
+            </div>
+    
+            <div class="card" style="margin-left: 450px; margin-top: -105px;margin-bottom: 35px">
+                <div class="card-body">
+                    Em uso
+                    <svg width="35px" height="30px" viewBox="0 0 16 16" class="bi bi-clipboard-data" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#00853b; margin-left:130px">
+                        <path fill-rule="evenodd" d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path fill-rule="evenodd" d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"/>
+                      </svg>
+                </div>
+    
+                </div>
+                <div class="card" style="margin-left: 850px; margin-top: -105px;margin-bottom: 35px">
+                    <div class="card-body">
+                        Disponíveis
+                        <svg width="35px" height="30px" viewBox="0 0 16 16" class="bi bi-file-earmark-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#00853b; margin-left:130px">
+                            <path d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
+                            <path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"/>
+                            <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                          </svg>
+                    </div>
+        
+                    </div>
+          </div>
+          <div class="inferior">
+            <div class="input-group" style="margin-left: 150px; width: 800px;">
+                <input type="text" class="form-control" placeholder="Pesquisar" style="margin-top: 30px;">
+                <div class="input-group-append" style="margin-top: 30px;">
+                  <button class="btn btn-secondary" type="button" style="background-color: #00853b">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filtrar por
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Código</a>
+                    <a class="dropdown-item" href="#">Nome</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Todos</a>
+                  </div>
+                </div>
+              </div>
+    
+              <table class="table" style="margin-left: 55px; margin-top: 50px; width: 1040px;">
+                <thead class="thead" style="background-color: #00853b; color: white;" >
+                  <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">#</th>
+    
+    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    {% for autor in autor %}
+                    <th scope="row">{{autor.codigo}}</th>
+                    <td>{{autor.nome}}</td>
+  
+                    <td><svg width="25px" height="20px" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                      </svg></td>
+    
+                  </tr>
+                  {% endfor %}
+                  
+                 
+                </tbody>
+         
+              
+             
+              </table>
+        </div>
+</body>
+{% endblock %}
